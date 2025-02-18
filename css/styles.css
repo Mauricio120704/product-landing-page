@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Remover estilos de lista */
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  /* Resetear enlaces */
+  a {
+    text-decoration: none;
+    color: inherit;
+  } 
+
+  /* Resetear imagenes*/
+  img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  header > nav > ul{
+    display: flex;
+    gap:10px;
+  }
+   /*Busqueda por id */
+   #hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+   }
+   
+   #hero h1{
+    font-size: 32px;
+   }
+
+   #hero div{
+    text-align: center;
+   }
+
+   #features{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 30px;
+    gap: 30px;
+   }
+
+   #features > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap:15px;
+   }
+
+   #features > div > p{
+    text-align: center;
+   }
