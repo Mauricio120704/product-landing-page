@@ -1,65 +1,286 @@
+/* Estilos base se mantienen */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-  /* Remover estilos de lista */
-  ul,
-  ol {
-    list-style: none;
-  }
-  
-  /* Resetear enlaces */
-  a {
-    text-decoration: none;
-    color: inherit;
-  } 
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Remover estilos de lista */
+ul,
+ol {
+  list-style: none;
 }
-body{
-  background-color: #3B88C3;
+
+/* Resetear enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+} 
+
+/* Resetear imagenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Paleta de colores inspirada en Apple */
+:root {
+  --apple-white: #ffffff;
+  --apple-light-gray: #f5f5f7;
+  --apple-medium-gray: #86868b;
+  --apple-dark-gray: #1d1d1f;
+  --apple-blue: #0071e3;
+  --apple-light-blue: #76b9ed;
+  --apple-accent: #6e6e73;
+  --apple-footer: #f5f5f7;
+  --apple-footer-text: #86868b;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--apple-light-gray);
+  color: var(--apple-dark-gray);
+  min-height: 100vh;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: 
-  "header header"
-  "aside main";
-  grid-template-rows: 100px 1fr;
-  height: 100vh;
-  width: 100vw;         
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    "header header"
+    "aside main";
+  grid-template-rows: auto 1fr;
 }
 
-header{
-  background-color: #1D2D50;
+/* Header estilo Apple */
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   grid-area: header;
-  border: solid #000  ;
-  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-header nav{
+
+header nav {
   display: flex;
   align-items: center;
-  justify-content:space-between;
-  padding: 20px;
-  flex-wrap:wrap-reverse;
+  justify-content: space-between;
+  padding: 14px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-header > h1{
-  font-size: 3rem;
+
+header nav h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--apple-dark-gray);
 }
-header > nav > ul{
+
+header nav div a p {
+  font-weight: 500;
+}
+
+header nav ul {
   display: flex;
-  gap:10px;
+  gap: 24px;
 }
-main{
-background-color: rgb(219, 215, 212);
+
+header nav ul li a {
+  font-size: 14px;
+  color: var(--apple-dark-gray);
+  transition: color 0.2s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+header > nav > div > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+#apple {
+  width: 30px;
+  height: 30px;
+}
+header nav ul li a:hover {
+  color: var(--apple-blue);
+}
+
+header nav ul li a[aria-current="page"] {
+  color: var(--apple-white);
+  background-color: var(--apple-blue);
+}
+
+/* Main content */
+main {
+  background-color: var(--apple-white);
   grid-area: main;
-  border: solid;
+  padding: 40px 20px;
+  border-radius: 0 0 12px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: auto;
 }
-aside{
-  background-color: #fff;
+
+main > h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--apple-dark-gray);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.testimonios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.testimonio {
+  background: var(--apple-white);
+  padding: 20px;
+  flex: 1 1 calc(33.33% - 20px);
+  min-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonio:hover {
+  transform: translateY(-5px);
+}
+
+.testimonio p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: var(--apple-dark-gray);
+}
+
+.testimonio span {
+  display: block;
+  font-weight: 500;
+  color: var(--apple-medium-gray);
+}
+
+/* Sidebar */
+aside {
+  background-color: var(--apple-light-gray);
   grid-area: aside;
-  border: solid;
+  padding: 30px 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-group h3 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--apple-dark-gray);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--apple-medium-gray);
+  transition: color 0.2s ease;
+}
+
+.filter-options label:hover {
+  color: var(--apple-dark-gray);
+}
+
+.filter-options input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--apple-medium-gray);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.filter-options input[type="checkbox"]:checked {
+  background-color: var(--apple-blue);
+  border-color: var(--apple-blue);
+}
+
+.filter-options input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.filter-btn {
+  background-color: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.filter-btn:hover {
+  background-color: #0062c3;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header"
+      "main"
+      "aside";
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  header nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  aside {
+    border-right: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonio {
+    flex: 1 1 100%;
+  }
 }
