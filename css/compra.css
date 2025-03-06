@@ -14,3 +14,12 @@ body{
   display: grid;
   
 }
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
