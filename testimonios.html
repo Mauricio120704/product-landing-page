@@ -4,50 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de testimonios</title>
-<<<<<<< HEAD
-=======
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS personalizado -->
->>>>>>> bootstrap
     <link rel="stylesheet" href="css/testimonios.css">
 </head>
 <body>
     <header>
-<<<<<<< HEAD
         <nav aria-label="Menú Principal">
             <div>
-                <a href="./index.html" aria-label="Ir a la página de inicio">
+                <a href="./index.html" target="_blank" aria-label="Ir a la página de inicio">
                 <img id="apple" src="https://cdn-icons-png.flaticon.com/128/731/731985.png" alt="Logo de Apple">
                     <p>iPad</p>
-=======
-        <nav class="navbar navbar-expand-lg" aria-label="Menú Principal">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="./index.html" aria-label="Ir a la página de inicio">
-                    <img id="apple" src="https://cdn-icons-png.flaticon.com/128/731/731985.png" alt="Logo de Apple" class="me-2">
-                    <p class="mb-0">iPad</p>
->>>>>>> bootstrap
                 </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
-                        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <h1 class="d-none d-lg-block">Testimonios</h1>
-                
-                <div class="collapse navbar-collapse" id="navbarMain">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="">Características</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="" aria-current="page">Testimonios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="compra.html">Compra</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Envíos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Pagos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Contacto</a></li>
-                    </ul>
-                </div>
             </div>
-<<<<<<< HEAD
             <h1>Testimonios</h1>
             <ul>
                 <li><a href="" >Características</a></li>
@@ -98,136 +65,8 @@
                 <label><input type="checkbox" name="rating" value="2"> 2 estrellas</label>
                 <label><input type="checkbox" name="rating" value="1"> 1 estrella</label>
             </div>
-=======
-        </nav>
-        <!-- Título móvil -->
-        <div class="d-lg-none text-center py-2">
-            <h1>Testimonios</h1>
->>>>>>> bootstrap
         </div>
-    </header>
-    
-    <div class="container-fluid p-0">
-        <div class="row g-0">
-            <!-- Sidebar con filtros -->
-            <aside class="col-lg-3 col-md-12 order-lg-1 order-md-2">
-                <div class="p-4">
-                    <div class="filter-group mb-4">
-                        <h3 class="mb-3">Calificación</h3>
-                        <div class="filter-options">
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="rating5" name="rating" value="5">
-                                <label class="form-check-label" for="rating5">5 estrellas</label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="rating4" name="rating" value="4">
-                                <label class="form-check-label" for="rating4">4 estrellas</label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="rating3" name="rating" value="3">
-                                <label class="form-check-label" for="rating3">3 estrellas</label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="rating2" name="rating" value="2">
-                                <label class="form-check-label" for="rating2">2 estrellas</label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="rating1" name="rating" value="1">
-                                <label class="form-check-label" for="rating1">1 estrella</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="filter-group mb-4">
-                        <h3 class="mb-3">Modelo de iPad</h3>
-                        <div class="filter-options">
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="modelPro" name="model" value="pro">
-                                <label class="form-check-label" for="modelPro">iPad Pro</label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="modelAir" name="model" value="air">
-                                <label class="form-check-label" for="modelAir">iPad Air</label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="modelMini" name="model" value="mini">
-                                <label class="form-check-label" for="modelMini">iPad Mini</label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="modelStandard" name="model" value="standard">
-                                <label class="form-check-label" for="modelStandard">iPad</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="filter-btn btn btn-primary w-100">Aplicar filtros</button>
-                </div>
-            </aside>
-            
-            <!-- Contenido principal -->
-            <main class="col-lg-9 col-md-12 order-lg-2 order-md-1">
-                <div class="container py-4">
-                    <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
-                    
-                    <div class="row testimonios g-4">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="testimonio h-100">
-                                <p>"El iPad ha cambiado la forma en que trabajo, su rendimiento es increíble."</p>
-                                <span>- Juan Pérez</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="testimonio h-100">
-                                <p>"Diseñar en este dispositivo es una experiencia fluida y cómoda."</p>
-                                <span>- Ana Gómez</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="testimonio h-100">
-                                <p>"La batería dura todo el día, perfecto para mis clases y reuniones."</p>
-                                <span>- Carlos Ramírez</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="testimonio h-100">
-                                <p>"Ideal para ver películas y leer libros, la pantalla es excelente."</p>
-                                <span>- Sofía Martínez</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="testimonio h-100">
-                                <p>"El Apple Pencil hace que tomar notas sea súper intuitivo y fácil."</p>
-                                <span>- Diego Fernández</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="testimonio h-100">
-                                <p>"Muy liviano y rápido, es el mejor dispositivo que he comprado."</p>
-                                <span>- Laura Castillo</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Paginación -->
-                    <nav aria-label="Paginación de testimonios" class="mt-5">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Siguiente</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </main>
-        </div>
-    </div>
-    
-    <!-- Bootstrap JS Bundle con Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <button class="filter-btn">Aplicar filtros</button>
+    </aside>
 </body>
 </html>
